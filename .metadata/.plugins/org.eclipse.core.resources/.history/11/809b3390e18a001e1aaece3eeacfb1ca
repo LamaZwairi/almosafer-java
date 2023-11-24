@@ -1,0 +1,48 @@
+package almosafer;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class testcasesforalmmosafer {
+	String url="https://global.almosafer.com/en";
+	WebDriver driver=new ChromeDriver();
+	
+	@BeforeTest
+	public void setup() {
+		
+		
+		driver.get(url);
+		driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div/div/button[1]")).click();
+		
+		
+	}
+	
+	
+	
+	@Test()
+	public void test() {
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	@AfterTest
+	
+	public void posttest() {}
+	
+	
+	
+	
+	
+	
+	
+
+}

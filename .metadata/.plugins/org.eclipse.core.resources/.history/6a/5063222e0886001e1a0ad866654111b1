@@ -1,0 +1,30 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Parameters {
+	
+	WebDriver driver=new ChromeDriver();
+	
+	String website="https://www.saucedemo.com/";
+	String username="standard_user";
+	String Password="secret_sauce";
+	
+	void Login() {
+		
+		WebElement usernameInput=driver.findElement(By.id("user-name"));
+		WebElement passwordInput=driver.findElement(By.id("password"));
+		WebElement LoginButton=driver.findElement(By.id("login-button"));
+
+		usernameInput.sendKeys(username);
+		passwordInput.sendKeys(Password);
+		LoginButton.click();
+		
+		
+	}
+	
+	
+	
+
+}
